@@ -1,0 +1,269 @@
+
+
+body{
+  font-family:Arial, Helvetica, sans-seriff;
+  background-color:#eee8de;
+}
+
+/* darl mode scripts */
+
+#dark{
+    transition: background-color 1s ease-in-out;
+    background-color: rgb(247, 14, 247);
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0;
+    justify-content: center;
+}
+
+#dark:hover{
+    background-color: purple;
+    color:#FFFFFF;
+    p{
+        color:#FFFFFF
+    }
+}
+
+
+.dark-mode {
+    background-color: #393737; 
+    color: #FFFFFF; 
+    h1{
+        color:#FFFFFF;
+    }
+    p{
+        color:#FFFFFF;
+    }
+    h2{
+        color:#54de60;
+    }
+}
+
+.dark-mode #dark{
+    background-color:purple;
+}
+
+.dark-mode #left_box{
+    background-color:#217e2b;
+}
+
+
+.dark-mode #right_box{
+    background-color:#217e2b;
+}
+
+.dark-mode header{
+    background-color:#c4b173;
+}
+
+.dark-mode #center_type{
+    background-color:rgb(94, 4, 94);
+
+}
+.dark-mode #command_box{
+    background-color:rgb(84, 148, 110);
+}
+/*Dark mode scripts */
+
+/*custome animation */
+
+@keyframes wiggle{
+    from{
+        transform: rotate(3deg)
+    }
+    50%{
+        transform: rotate(-3deg);
+    }
+    to{
+        transform: rotate(3deg);
+    }
+}
+
+
+/*custome animation*/
+
+h1{
+  color:black;
+  text-align:left;
+  margin:3%;
+  
+}
+
+h2{
+  color:blue;
+  text-align:right;
+
+}
+
+h3{
+  text-align:center;
+}
+
+p{
+  color:black;
+  text-align:center;
+  font-size: 18px;
+}
+
+a{
+  text-align:center;
+}
+
+header{
+  box-sizing:border-box;
+  border-radius:12px;
+  background-color:#fdde76;
+  text-align:center;
+  padding: 10px;
+}
+
+footer{
+  box-sizing:border-box;
+  border-radius:10px;
+  background-color:green;
+  text-align:center;
+  padding:10px;
+  margin:2%;
+  margin-top: 20%;
+
+}
+.small_box {
+  display:block;
+  text-align:center;
+  box-sizing:border-box;
+  border-radius:10px;
+  background-color:yellow;
+  width:20%;
+  margin: 0 5px;
+}
+
+
+#container{
+  display:flex;
+  justify-content:spacebetween;
+}
+
+
+#left_box {
+  border-radius:10px;
+  background-color:#ffa274;
+  width:35%;
+  min-height:500px;
+  text-align: center;
+  margin-right: 1%;
+}
+
+#command_box{
+  float:left;
+  border-radius:10px;
+  background-color:#fdde76;
+  text-align: center;
+  margin-right: 1%;
+
+}
+
+#right_box{
+  justify-content:center;
+  align-items: center;
+  flex-wrap:wrap;
+  border-radius:10px;
+  float:right;
+  background-color:#ffa264;
+  width:35%;
+  min-height:500px;
+  text-align: center;
+
+}
+
+#center_type{
+  border-radius:10px;
+  background-color:#CAB8CB;
+  margin-top:10%;
+  text-align: center;
+
+  margin-left:5%;
+
+
+}
+
+.bold_present{
+  font-size: medium;
+  font-weight: bold;
+}
+
+.left{
+  text-align:left;
+}
+
+.right{
+  text-align:right;
+}
+
+.blue{
+  color:blue
+}
+.purple{
+  color:rgb(66, 0, 128)
+}
+
+.effects{
+    animation: wiggle 1s ease-in-out infinite;
+}
+
+.project{
+  text-align:center;
+  display:block;
+  margin: auto;
+}
+
+a{
+  text-align:center;
+  display:block;
+  margin: auto;
+}
+
+img{
+  width: 20%;
+  height: auto;
+}
+
+#big_img{
+  width: 100%;
+  height: auto;
+}
+/* The primary changes made for better accecibility
+Changing images to scale with the screen size (and to not hang off the box, when placed at a non perfect screen size)
+Changing the overall layout to be responsive to screen size, primarly switching to columns stacked ontop of each other, instead of side to side when at a certain screen size.
+Changing the color palette to be better optimized in a bright envirnment 
+and for color blind viewing
+Adding nav tags instead of div in the navigation boxes, main tags for main content, and aside for aside content
+Making sure keyboard tab and enter navigation's work optimally
+more detailed alt tabs to images
+color coded navigation tabs to be more direct
+better more descriptive alt text for images
+fixed spelling errors to make narrator more friendly
+increased font size to be more readable (sense there was a lot of open real estate)
+cleared w3c validation service, with the exception of some issues in the flicker link
+cleared google lighthouse accessibility marks
+ */
+
+@media(max-width: 500px)
+{
+  div#container{
+    flex-direction: column;
+  }
+  #right_box{
+    flex-direction: column;
+    width:100%;
+  }
+  #left_box{
+    flex-direction: column;
+    width:100%;
+    min-height: 350px;
+  }
+  img{
+    width: 80%;
+    height: auto;
+  }
+}
